@@ -2,8 +2,8 @@
 
 const HomeLayout: React.FC = () => {
   return (
-    <div>
-      <h1>Home</h1>
+    <div className="h-screen w-screen bg-red-400">
+      <h3 className="text-emerald-950 text-9xl">Text</h3>
     </div>
   );
 };
