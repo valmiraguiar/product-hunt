@@ -1,11 +1,7 @@
-'use client';
+import VoteButton from '@/presentation/components/layout/internal/VoteButton';
 
 const HomeLayout: React.FC = () => {
-  return (
-    <div className="h-screen w-screen bg-red-400">
-      <h3 className="text-emerald-950 text-9xl">Text</h3>
-    </div>
-  );
+  return <VoteButton numberOfVotes="252" />;
 };
 
 export default HomeLayout;

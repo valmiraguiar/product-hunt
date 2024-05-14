@@ -42,11 +42,9 @@
       "error",
       {
         "selector": "interface",
-        "format": [
-          "PascalCase"
-        ],
+        "format": ["PascalCase"],
         "custom": {
-          "regex": "^I[A-Z]",
+          "regex": "^[A-Z]",
           "match": true
         }
       }
@@ -70,15 +68,7 @@
       "warn",
       {
         "newlinesBetween": "always",
-        "groups": [
-          "module",
-          "/^@shared/",
-          [
-            "parent",
-            "sibling",
-            "index"
-          ]
-        ],
+        "groups": ["module", "/^@shared/", ["parent", "sibling", "index"]],
         "alphabetize": {
           "order": "asc",
           "ignoreCase": true
@@ -88,26 +78,19 @@
     "import/no-extraneous-dependencies": [
       "error",
       {
-        "devDependencies": [
-          "**/*.spec.js"
-        ]
+        "devDependencies": ["**/*.spec.js"]
       }
     ],
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [
-          ".jsx",
-          ".tsx"
-        ]
+        "extensions": [".jsx", ".tsx"]
       }
     ],
     "react/react-in-jsx-scope": "off",
     "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": [
-      "error"
-    ],
+    "@typescript-eslint/no-use-before-define": ["error"],
     "@typescript-eslint/no-empty-function": "warn",
     "@typescript-eslint/no-empty-interface": "off"
   },
