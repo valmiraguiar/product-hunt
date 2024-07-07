@@ -5,8 +5,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html>
       <head>
-        <link rel="icon" href="/logo.ico" />
-        <title>Product Hunt</title>
+        <link rel="icon" href="/logo.svg" />
+        <title>Product Hunt - The best new products in tech.</title>
       </head>
       <body>{children}</body>
     </html>
