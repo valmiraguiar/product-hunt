@@ -5,7 +5,8 @@ const RedirectIcon: React.FC = props => {
       width="13"
       height="14"
       viewBox="0 0 13 14"
-      className="group"
+      className="group absolute right-0 bottom-0"
+      {...props}
     >
       <g
         fill="none"

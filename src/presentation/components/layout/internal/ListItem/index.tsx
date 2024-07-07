@@ -1,10 +1,13 @@
-import ItemImageIcon from './components/ItemImageIcon';
-import CommentsTagLayout from './components/ItemTitleDescription/components/TagLayout/components/CommentsTag';
-import RedirectIcon from './components/ItemTitleDescription/components/TitleLayout/components/RedirectIcon';
+import ProductContent from './components/ProductContent';
 import VoteButton from './components/VoteButton';
 import { ListItemProps } from './types';
 
-const ListItem: React.FC<ListItemProps> = ({ title, description, imgUrl }) => {
+const ListItem: React.FC<ListItemProps> = ({
+  title,
+  description,
+  imgUrl,
+  tagsList,
+}) => {
   return (
     <div className="transition-all duration-700 relative">
       <div
@@ -19,22 +22,12 @@ const ListItem: React.FC<ListItemProps> = ({ title, description, imgUrl }) => {
           to-transparent to-60% bg-size-200  bg-pos-0 hover:bg-pos-100"
         />
         <div className="w-full h-full flex justify-between z-10 bg-white/100 hover:bg-white/0 transition-all duration-700">
-          <div className="flex flex-row items-center w-full h-full gap-4">
-            <ItemImageIcon imgUrl={imgUrl} />
-
-            <div className="w-full flex-row place-items-start">
-              <div className="flex items-center gap-2">
-                <p className="font-light">
-                  <span className="font-medium">{title}</span>{' '}
-                  <span className="text-[#90949D]">—</span> {description}
-                </p>
-
-                <RedirectIcon />
-              </div>
-
-              <CommentsTagLayout />
-            </div>
-          </div>
+          <ProductContent
+            imgUrl={imgUrl}
+            title={title}
+            description={description}
+            tagsList={tagsList}
+          />
 
           <div className="h-full flex justify-center items-center pr-3">
             <VoteButton numberOfVotes="252" />

@@ -2,7 +2,7 @@ import ChatIcon from './components/ChatIcon';
 
 const CommentsTag: React.FC = () => {
   return (
-    <div className="group w-[24px] h-full flex gap-[2px] font-semibold mr-1">
+    <div className="group w-[24px] h-full flex gap-[2px] font-semibold mr-1 text-[#4B587C]">
       <div className="flex">
         <ChatIcon />
       </div>

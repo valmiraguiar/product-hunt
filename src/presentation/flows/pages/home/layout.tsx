@@ -12,9 +12,11 @@ const HomeLayout: React.FC<IHomeLayoutProps> = ({
     <div className="h-screen w-screen bg-white p-4">
       {productListDataState?.map(product => (
         <ListItem
+          key={`key-${product.name}`}
           title={product.name}
           description={product.description}
           imgUrl={product.imgUrl}
+          tagsList={product.topics}
         />
       ))}
     </div>
