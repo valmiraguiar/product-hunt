@@ -1,4 +1,4 @@
-import ListItem from '@/presentation/components/layout/internal/ListItem';
+import ListItem from '@/presentation/components/layout/internal/components/ListItem';
 
 import { IHomeLayoutProps } from './types';
 
