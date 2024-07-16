@@ -9,7 +9,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="icon" href="/logo.svg" />
         <title>Product Hunt - The best new products in tech.</title>
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <ExternalProvider>{children}</ExternalProvider>
       </body>
     </html>

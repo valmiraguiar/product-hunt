@@ -7,9 +7,16 @@ const ListItem: React.FC<ListItemProps> = ({
   description,
   imgUrl,
   tagsList,
+  onUpVote,
+  onRedirectClick,
+  onItemClick,
 }) => {
   return (
-    <div className="transition-all duration-700 relative">
+    <div
+      className="transition-all duration-700 relative"
+      role="presentation"
+      onClick={onItemClick}
+    >
       <div
         className="
           w-[840px]
@@ -27,10 +34,11 @@ const ListItem: React.FC<ListItemProps> = ({
             title={title}
             description={description}
             tagsList={tagsList}
+            onRedirectClick={onRedirectClick}
           />
 
           <div className="h-full flex justify-center items-center pr-3">
-            <VoteButton numberOfVotes="252" />
+            <VoteButton numberOfVotes="252" onVoteClick={onUpVote} />
           </div>
         </div>
       </div>

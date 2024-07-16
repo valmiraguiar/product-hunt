@@ -8,13 +8,18 @@ const ProductContent: React.FC<IProductContentProps> = ({
   description,
   imgUrl,
   tagsList,
+  onRedirectClick,
 }) => {
   return (
     <div className="flex flex-row items-center w-full h-full gap-4">
       <ItemImageIcon imgUrl={imgUrl} />
 
       <div className="w-full flex-row place-items-start">
-        <ProductTitle title={title} description={description} />
+        <ProductTitle
+          title={title}
+          description={description}
+          onRedirectClick={onRedirectClick}
+        />
 
         <TagLayout tagList={tagsList} />
       </div>

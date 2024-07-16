@@ -1,3 +1,5 @@
+import { Fragment } from 'react';
+
 import CommentsTag from './components/CommentsTag';
 import SeparatorCircleIcon from './components/SeparatorCircleIcon';
 import Tag from './components/Tag';
@@ -9,10 +11,10 @@ const TagLayout: React.FC<ITagLayoutProps> = ({ tagList }) => {
       <CommentsTag />
 
       {tagList?.map(tag => (
-        <>
+        <Fragment key={`key-${tag}`}>
           <SeparatorCircleIcon />
           <Tag text={tag} />
-        </>
+        </Fragment>
       ))}
     </div>
   );

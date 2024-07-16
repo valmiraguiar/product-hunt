@@ -3,6 +3,7 @@ interface IProductContentProps {
   title: string;
   description: string;
   tagsList: string[];
+  onRedirectClick?: () => void;
 }
 
 export type { IProductContentProps };
